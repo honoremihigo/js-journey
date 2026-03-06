@@ -1,0 +1,102 @@
+$primary-clr: hsl(14, 86%, 42%);
+$secondary-clr: hsl(12, 20%, 44%);
+$bg-clr: hsl(20, 50%, 98%);
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Text";
+  background-color: $bg-clr;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+  }
+}
+
+.all {
+  border: 1px solid red;
+  padding: 20px;
+  .left-cont {
+    // border:1px solid blue;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .desert-container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+      .desert {
+        min-width: 230px;
+        max-width: 230px;
+        // border: 1px solid green;
+         flex: 1 1 200px; // Items grow to fill space, base width of 200px, shrink if needed
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: relative;
+        img {
+          width: 100%;
+          border-radius: 10px;
+        }
+        .add-to-cart-btn {
+          padding: 10px;
+          background-color: white;
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 7px;
+          // border: 1px solid red;
+          border-radius: 40px;
+          width: 120px;
+          position: absolute;
+          top: 62%;
+          left: 20%;
+          border: 2px solid transparent;
+          transition: all 0.3s ease;
+          img {
+            width: 20px;
+            height: 20px;
+          }
+          p {
+            font-size: 13px;
+            font-weight: 500;
+            color: balck;
+          }
+          &:hover {
+            border: 2px solid $primary-clr;
+            color: $primary-clr;
+          }
+        }
+        .desert-info {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          padding-top: 10px;
+          p {
+            color: $secondary-clr;
+            font-size: 12px;
+          }
+          .price {
+            color: $primary-clr;
+          }
+        }
+        .price {
+          color: $primary-clr;
+        }
+      }
+    }
+  }
+}

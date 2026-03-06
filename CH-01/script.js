@@ -1,0 +1,1 @@
+console.log("js file seen😊" + 5  ** 2)
